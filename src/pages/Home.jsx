@@ -6,8 +6,6 @@ import Snowy from "../images/snowy.gif";
 import Sunny from "../images/sunny.gif";
 
 const Home = () => {
-  const apiKey = "d6cef82cad9b94b3e4f9a9b356ea8cfc";
-
   const [weather, setWeather] = useState(null);
 
   const weathers = [
@@ -40,7 +38,7 @@ const Home = () => {
   const [backgroundImage, setBackgroundImage] = useState("");
   const weatherSearch = (cityName) => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=d6cef82cad9b94b3e4f9a9b356ea8cfc`
     )
       .then((response) => response.json())
       .then((data) => {
